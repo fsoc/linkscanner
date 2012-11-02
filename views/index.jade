@@ -1,0 +1,18 @@
+body#body1
+div#main
+    div#maintop
+        img#logo(src='images/logo.png')
+        p.text1 Virus Scan your link before sharing it.
+        p#explanation.text2 Type the URL here to scan it and generate a safe link to share with your friends.
+        input(spellcheck='false',value='URL',id='url',name='url',type='text',class='focusout')
+        img#preloader(src='images/ajax.gif')
+        br
+        button#button(type='button') Scan Link
+    div#mainbottom
+        div#mainContainer
+            div#googlePic
+                a(rel='nofollow',href='http://code.google.com/intl/sv-SE/apis/safebrowsing/')
+                    img(src='images/google-safebrowsing-seal-check.png')
+            div#safeBrowsingHeader
+                p.text3 Scanned with Google Safe Browsing
+        p.text4 Safe Browsing is a service provided by Google that enables applications to check URLs against Google's constantly updated lists of suspected phishing and malware pages

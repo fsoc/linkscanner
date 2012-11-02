@@ -1,0 +1,20 @@
+body#body2
+div#top
+    div#googlePic
+        a(rel='nofollow',href='http://www.google.com/safebrowsing/diagnostic?site=#{url}')
+            img(src='images/google-safebrowsing-seal-check.png')
+    div#topText.text4 This page is tested for malware against the google safebrowsing API. Please go to 
+        a(href='#{baseUrl}') #{baseUrl} 
+        | to scan a new url.
+    div#zyx 
+    div#closeButton
+        a(rel='nofollow',href='#{url}')
+            img(src='images/close.png')
+- var status = safetystatus
+- if( status == 'safe') 
+    iframe#iframe(src='#{url}')
+- else
+    div#notification.text3 The webpage you tried to enter is not safe! If you want to go there anyways click here: 
+        a(rel='nofollow',href='#{url}') #{url}
+
+script(type='text/javascript') mpq.track('resolve', {'url':'#{url}'});
